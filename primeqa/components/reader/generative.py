@@ -6,7 +6,7 @@ from datasets import Dataset
 from dataclasses import dataclass
 import json
 
-from primeqa.pipelines.components.base import ReaderComponent
+from primeqa.Components.base import Reader
 from primeqa.mrc.models.heads.generative import FID_HEAD
 from primeqa.mrc.models.fid_task_model import FiDModelForDownstreamTasks
 from primeqa.mrc.processors.preprocessors.eli5_fid import ELI5FiDPreprocessor
@@ -15,7 +15,7 @@ from primeqa.mrc.processors.postprocessors.eli5_fid import ELI5FiDPostProcessor
 from primeqa.mrc.trainers.seq2seq_mrc import MRCSeq2SeqTrainer
 
 @dataclass
-class GenerativeReader(ReaderComponent):
+class GenerativeReader(Reader):
     """_summary_
 
     Args:
